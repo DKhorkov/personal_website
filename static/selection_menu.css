@@ -1,0 +1,23 @@
+.selectionMenu {
+  margin-left: 40%;
+  text-align: center;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-top: 30px;
+  list-style-type: none; /* убираем маркер */
+  font-style: italic;
+  /* border: 2px white dashed; */
+  float: left;
+}
+
+li a {
+  display: block;
+  padding-left: 30px;
+  margin: 0;
+}

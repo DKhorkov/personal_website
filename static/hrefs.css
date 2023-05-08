@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+img {
+  background-color: white;
+  height: 60px;
+  width: 60px;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+img:hover {
+  background-color: blueviolet;
+}
