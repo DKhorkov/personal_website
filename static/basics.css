@@ -1,9 +1,27 @@
 * {
   margin: 0;
   padding: 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 
-.socialMedia {
-  margin-left: 30%;
-  margin-top: 20px;
+.socialMediaPictures {
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  margin-top: 13px;
+}
+
+.socialMediaPictures:hover {
+  background-color: blueviolet;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+body {
+  background-image: url('../images/about_bg_image.jpg');
+  background-size: cover;
+  /* background-size: auto; */
 }

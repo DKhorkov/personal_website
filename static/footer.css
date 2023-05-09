@@ -2,9 +2,15 @@ footer,
 header {
   background-color: black;
   width: 100%;
-  height: 100px;
+  height: 80px;
   color: silver;
   font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
 }
 
 footer {
