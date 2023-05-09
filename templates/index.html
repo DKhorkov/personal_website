@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,19 +9,26 @@
     <meta name="description" content="Personal webpage of Khorkov Dmitriy" />
     <meta name="keywords" content="python developer, fullstack developer" />
     <title>Khorkov Dmitriy</title>
+
+    <!-- CSS links -->
     <link rel="stylesheet" href="../static/basics.css" />
     <link rel="stylesheet" href="../static/footer.css" />
     <link rel="stylesheet" href="../static/hrefs.css" />
     <link rel="stylesheet" href="../static/selection_menu.css" />
     <link rel="stylesheet" href="../static/about.css" />
+    <link rel="stylesheet" href="../static/social_media.css" />
   </head>
   <body>
     <header>
       <div class="selectionMenu">
-        <ul>
-          <li><a href="#projects">Проекты</a></li>
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+        <ul id="selectionMenuList">
+          <li class="selectionMenuListElement">
+            <a href="#projects">Проекты</a>
+          </li>
+          <li class="selectionMenuListElement"><a href="#about">Обо мне</a></li>
+          <li class="selectionMenuListElement">
+            <a href="#contacts">Контакты</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -28,7 +36,7 @@
     <div id="about">
       <div class="aboutHeader">
         <h1 class="aboutIntro">
-          Привет! Меня зовут Дима <br />и я Python Developer!
+          Привет! Меня зовут Дима, <br />и я Python Developer!
         </h1>
         <img
           src="../images/about_avatar.jpg"
@@ -39,6 +47,28 @@
       <div class="aboutDescription">
         <h1>Обо мне:</h1>
         <h3 id="aboutInfoText"></h3>
+      </div>
+      <div class="aboutSkills">
+        <h1>Что я умею:</h1>
+        <ul id="skillsList">
+          <li class="skillsListElement">Создавать телеграмм ботов</li>
+          <li class="skillsListElement">
+            Работать с такими фреймворками для WEB-приложений как Django и
+            FastApi
+          </li>
+          <li class="skillsListElement">
+            Создавать REST-api (предпочитаю тот же FastApi под капотом)
+          </li>
+          <li class="skillsListElement">
+            Работать SQL и NOSQL СУБД: PostgreSQL, MySQL, SQLite, MongoDB
+            (предпочитаю через SQLAlchemy)
+          </li>
+          <li class="skillsListElement">Изолировать систему через Docker</li>
+          <li class="skillsListElement">
+            Работать с сокетами (строил консольную и UI игру по локальной сети
+            на основе Socket и Tkinker библиотек)
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -58,16 +88,36 @@
 
     <footer>
       <div class="socialMedia">
-        <a href="https://vk.com/alexqwerty35" target="_blank">
-          <img
-            class="socialMediaPictures"
-            src="../images/vk_logo.png"
-            alt="vk.com"
-          />
-        </a>
+        <div id="socialMediaVk">
+          <a href="https://vk.com/alexqwerty35" target="_blank">
+            <img
+              id="socialMediaVkLogo"
+              src="../images/vk_logo.png"
+              alt="vk.com"
+            />
+          </a>
+        </div>
+        <div id="socialMediaGitHub">
+          <a href="https://github.com/DKhorkov" target="_blank">
+            <img
+              id="socialMediaGitHubLogo"
+              src="../images/github_logo.png"
+              alt="github.com"
+            />
+          </a>
+        </div>
+        <div id="socialMediaTelegram">
+          <a href="https://t.me/D3M0S666" target="_blank">
+            <img
+              id="socialMediaTelegramLogo"
+              src="../images/telegram_logo.svg"
+              alt="github.com"
+            />
+          </a>
+        </div>
       </div>
     </footer>
 
-    <script src="../scripts/on_startup.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
   </body>
 </html>

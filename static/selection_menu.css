@@ -4,13 +4,13 @@
   /* position: absolute; */
 }
 
-ul {
+#selectionMenuList {
   text-align: center;
   margin-left: 0;
   padding-left: 0;
 }
 
-li {
+.selectionMenuListElement {
   display: inline-block;
   margin-top: 25px;
   list-style-type: none; /* убираем маркер */
@@ -21,6 +21,6 @@ li {
   padding-right: 30px;
 }
 
-li:last-of-type {
+selectionMenuListElement:last-of-type {
   padding-right: 0px;
 }
