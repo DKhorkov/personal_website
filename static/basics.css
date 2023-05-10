@@ -2,12 +2,22 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
   font-style: italic;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* background-image: url('../images/about_bg_image.jpg'); */
+  background-image: url('../images/about_bg.png');
   background-size: cover;
   /* background-size: auto; */
+}
+
+.divider {
+  width: 100%;
+  height: 100px;
+  background-color: #7293fd;
 }

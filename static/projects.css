@@ -1,0 +1,36 @@
+#projects {
+  width: 100%;
+  height: 1080px;
+  background-image: url('../images/projects_bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projectsButtonsGroup {
+  padding-top: 100px;
+}
+
+.projectsButton {
+  font-size: 30px;
+  margin-right: 3%;
+  padding: 0.3% 1%;
+  color: white;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+}
+
+.projectsButton:hover {
+  color: blueviolet;
+  border-color: blueviolet;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}

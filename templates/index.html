@@ -12,21 +12,28 @@
 
     <!-- CSS links -->
     <link rel="stylesheet" href="../static/basics.css" />
-    <link rel="stylesheet" href="../static/footer.css" />
+    <link rel="stylesheet" href="../static/header_and_footer.css" />
     <link rel="stylesheet" href="../static/hrefs.css" />
     <link rel="stylesheet" href="../static/selection_menu.css" />
     <link rel="stylesheet" href="../static/about.css" />
     <link rel="stylesheet" href="../static/social_media.css" />
+    <link rel="stylesheet" href="../static/projects.css" />
+    <link rel="stylesheet" href="../static/contacts.css" />
   </head>
   <body>
     <header>
       <div class="selectionMenu">
         <ul id="selectionMenuList">
           <li class="selectionMenuListElement">
+            <img src="../images/Planet1.png" alt="Planet1" id="planetOne" />
+            <a href="#about">Обо мне</a>
+          </li>
+          <li class="selectionMenuListElement">
+            <img src="../images/Planet2.png" alt="Planet2" id="planetTwo" />
             <a href="#projects">Проекты</a>
           </li>
-          <li class="selectionMenuListElement"><a href="#about">Обо мне</a></li>
           <li class="selectionMenuListElement">
+            <img src="../images/Planet3.png" alt="Planet3" id="planetThree" />
             <a href="#contacts">Контакты</a>
           </li>
         </ul>
@@ -35,16 +42,11 @@
 
     <div id="about">
       <div class="aboutHeader">
-        <h1 class="aboutIntro">
-          Привет! Меня зовут Дима, <br />и я Python Developer!
-        </h1>
-        <img
-          src="../images/about_avatar.jpg"
-          alt="Avatar of Khorkov Dmitriy"
-          class="aboutAvatar"
-        />
+        <h1 class="aboutIntro">Привет! Меня зовут Дима, <br />и я Python Developer!</h1>
+        <img src="../images/about_avatar.jpg" alt="Avatar of Khorkov Dmitriy" class="aboutAvatar" />
       </div>
       <div class="aboutDescription">
+        <h1 id="characteristics">Developer</h1>
         <h1>Обо мне:</h1>
         <h3 id="aboutInfoText"></h3>
       </div>
@@ -52,67 +54,50 @@
         <h1>Что я умею:</h1>
         <ul id="skillsList">
           <li class="skillsListElement">Создавать телеграмм ботов</li>
+          <li class="skillsListElement">Работать с такими фреймворками для WEB-приложений как Django и FastApi</li>
+          <li class="skillsListElement">Создавать REST-api (предпочитаю тот же FastApi под капотом)</li>
           <li class="skillsListElement">
-            Работать с такими фреймворками для WEB-приложений как Django и
-            FastApi
-          </li>
-          <li class="skillsListElement">
-            Создавать REST-api (предпочитаю тот же FastApi под капотом)
-          </li>
-          <li class="skillsListElement">
-            Работать SQL и NOSQL СУБД: PostgreSQL, MySQL, SQLite, MongoDB
-            (предпочитаю через SQLAlchemy)
+            Работать SQL и NOSQL СУБД: PostgreSQL, MySQL, SQLite, MongoDB (предпочитаю через SQLAlchemy)
           </li>
           <li class="skillsListElement">Изолировать систему через Docker</li>
           <li class="skillsListElement">
-            Работать с сокетами (строил консольную и UI игру по локальной сети
-            на основе Socket и Tkinker библиотек)
+            Работать с сокетами (строил консольную и UI игру по локальной сети на основе Socket и Tkinker библиотек)
           </li>
         </ul>
       </div>
     </div>
 
-    <main>
-      <div class="project"></div>
-      <div class="project"></div>
-      <div class="project"></div>
-      <div class="project"></div>
-    </main>
+    <!-- <div class="divider"></div> -->
 
-    <div class="test">test</div>
-    <div class="test">test</div>
-    <div class="test">test</div>
-    <div class="test">test</div>
-    <div class="test">test</div>
-    <div class="test">test</div>
+    <div id="projects">
+      <div class="projectsButtonsGroup">
+        <button class="projectsButton" id="telegramBot">PlantsCareBot</button>
+        <button class="projectsButton" id="djangoWebstore">NataliaToys</button>
+        <button class="projectsButton" id="FastApiTaskManager">TaskManager</button>
+      </div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+    </div>
+
+    <div id="contacts"></div>
 
     <footer>
       <div class="socialMedia">
         <div id="socialMediaVk">
           <a href="https://vk.com/alexqwerty35" target="_blank">
-            <img
-              id="socialMediaVkLogo"
-              src="../images/vk_logo.png"
-              alt="vk.com"
-            />
+            <img id="socialMediaVkLogo" src="../images/vk_logo.png" alt="vk.com" />
           </a>
         </div>
         <div id="socialMediaGitHub">
           <a href="https://github.com/DKhorkov" target="_blank">
-            <img
-              id="socialMediaGitHubLogo"
-              src="../images/github_logo.png"
-              alt="github.com"
-            />
+            <img id="socialMediaGitHubLogo" src="../images/github_logo.png" alt="github.com" />
           </a>
         </div>
         <div id="socialMediaTelegram">
           <a href="https://t.me/D3M0S666" target="_blank">
-            <img
-              id="socialMediaTelegramLogo"
-              src="../images/telegram_logo.svg"
-              alt="github.com"
-            />
+            <img id="socialMediaTelegramLogo" src="../images/telegram_logo.svg" alt="github.com" />
           </a>
         </div>
       </div>

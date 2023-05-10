@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'SpaceAgecyrillic Regular';
+  src: url('../fonts/Space_Agecyrillic_Regular.ttf');
+}
+
 .selectionMenu {
   /* margin-left: 35%; */
   text-align: center;
@@ -8,19 +13,45 @@
   text-align: center;
   margin-left: 0;
   padding-left: 0;
+  height: auto;
 }
 
 .selectionMenuListElement {
-  display: inline-block;
-  margin-top: 25px;
+  display: inline;
+  margin-top: -25px;
   list-style-type: none; /* убираем маркер */
+  list-style-image: none;
   font-style: italic;
-  /* border: 2px white dashed; */
   font-size: 25px;
   text-align: center;
-  padding-right: 30px;
+  padding-right: 50px;
+  font-family: 'SpaceAgecyrillic Regular';
 }
 
 selectionMenuListElement:last-of-type {
   padding-right: 0px;
+}
+
+#planetOne,
+#planetTwo,
+#planetThree {
+  display: inline;
+  /* margin-top: 40px; */
+  width: 62px;
+  height: 60px;
+}
+
+#planetOne {
+  width: 62px;
+  height: 60px;
+}
+
+#planetTwo {
+  width: 66px;
+  height: 66px;
+}
+
+#planetThree {
+  width: 104px;
+  height: 62px;
 }
