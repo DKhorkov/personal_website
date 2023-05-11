@@ -4,9 +4,7 @@
 }
 
 .selectionMenu {
-  /* margin-left: 35%; */
   text-align: center;
-  /* position: absolute; */
 }
 
 #selectionMenuList {
@@ -17,15 +15,18 @@
 }
 
 .selectionMenuListElement {
-  display: inline;
-  margin-top: -25px;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  margin-top: 23px;
   list-style-type: none; /* убираем маркер */
   list-style-image: none;
-  font-style: italic;
+  font-style: normal;
   font-size: 25px;
   text-align: center;
   padding-right: 50px;
   font-family: 'SpaceAgecyrillic Regular';
+  color: #ffffff;
 }
 
 selectionMenuListElement:last-of-type {
@@ -35,23 +36,72 @@ selectionMenuListElement:last-of-type {
 #planetOne,
 #planetTwo,
 #planetThree {
-  display: inline;
-  /* margin-top: 40px; */
-  width: 62px;
-  height: 60px;
+  position: absolute;
+  display: inline-block;
+  /* margin-top: 20px; */
+  /* width: 62px;
+  height: 60px; */
 }
 
 #planetOne {
-  width: 62px;
-  height: 60px;
+  left: 7%;
+  right: 24%;
+  top: -10%;
+  bottom: 45%;
 }
 
 #planetTwo {
-  width: 66px;
-  height: 66px;
+  left: 40%;
+  right: 24%;
+  top: -10%;
+  bottom: 45%;
 }
 
 #planetThree {
-  width: 104px;
-  height: 62px;
+  left: 70%;
+  right: 24%;
+  top: -10%;
+  bottom: 45%;
+}
+
+#selectionMenuAboutRef {
+  position: absolute;
+  left: 12.66%;
+  right: 69.48%;
+  top: 19.06%;
+  bottom: 45.31%;
+
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 46px;
+}
+
+#selectionMenuProjectsRef {
+  position: absolute;
+  left: 44.22%;
+  right: 37.86%;
+  top: 19.06%;
+  bottom: 45.31%;
+
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 46px;
+}
+
+#selectionMenuContactsRef {
+  position: absolute;
+  left: 75.78%;
+  right: 6.3%;
+  top: 19.22%;
+  bottom: 45.16%;
+
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 46px;
+}
+
+#selectionMenuAboutRef:hover,
+#selectionMenuProjectsRef:hover,
+#selectionMenuContactsRef:hover {
+  color: blueviolet;
 }
