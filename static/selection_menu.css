@@ -8,6 +8,12 @@
 }
 
 #selectionMenuList {
+  /* Работае только с flex */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
   text-align: center;
   margin-left: 0;
   padding-left: 0;
@@ -15,16 +21,18 @@
 }
 
 .selectionMenuListElement {
+  /* Работае только с flex */
+  display: flex;
   align-items: center;
-  text-align: center;
-  display: inline-block;
-  margin-top: 23px;
+
+  /* text-align: center; */
+  /* margin-top: -15px; */
   list-style-type: none; /* убираем маркер */
   list-style-image: none;
-  font-style: normal;
-  font-size: 25px;
-  text-align: center;
-  padding-right: 50px;
+  /* font-style: normal; */
+  /* font-size: 25px; */
+  /* text-align: center; */
+  /* padding-right: 50px; */
   font-family: 'SpaceAgecyrillic Regular';
   color: #ffffff;
 }
@@ -36,14 +44,17 @@ selectionMenuListElement:last-of-type {
 #planetOne,
 #planetTwo,
 #planetThree {
-  position: absolute;
-  display: inline-block;
+  /* position: absolute; */
+  /* display: inline-block; */
   /* margin-top: 20px; */
   /* width: 62px;
   height: 60px; */
+
+  height: 80px;
+  width: auto;
 }
 
-#planetOne {
+/* #planetOne {
   left: 7%;
   right: 24%;
   top: -10%;
@@ -62,39 +73,21 @@ selectionMenuListElement:last-of-type {
   right: 24%;
   top: -10%;
   bottom: 45%;
-}
+} */
 
 #selectionMenuAboutRef {
-  position: absolute;
-  left: 12.66%;
-  right: 69.48%;
-  top: 19.06%;
-  bottom: 45.31%;
-
   font-weight: 400;
   font-size: 46px;
   line-height: 46px;
 }
 
 #selectionMenuProjectsRef {
-  position: absolute;
-  left: 44.22%;
-  right: 37.86%;
-  top: 19.06%;
-  bottom: 45.31%;
-
   font-weight: 400;
   font-size: 46px;
   line-height: 46px;
 }
 
 #selectionMenuContactsRef {
-  position: absolute;
-  left: 75.78%;
-  right: 6.3%;
-  top: 19.22%;
-  bottom: 45.16%;
-
   font-weight: 400;
   font-size: 46px;
   line-height: 46px;
