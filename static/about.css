@@ -17,7 +17,7 @@
   padding-bottom: 20px;
 }
 
-.aboutIntro {
+.about-intro {
   text-align: center;
   color: white;
   padding-top: 100px;
@@ -25,7 +25,7 @@
   font-style: italic;
 }
 
-.aboutAvatar {
+.about-avatar {
   object-fit: cover;
   width: 180px;
   height: 180px;
@@ -34,13 +34,13 @@
   border: 5px solid silver;
 }
 
-.aboutDescription,
-.aboutSkills {
+.about-description,
+.about-skills {
   color: white;
   margin-top: 2%;
 }
 
-.skillsListElement {
+.skills-list-element {
   /* text-align: justify; */
   font-size: 20px;
   padding-top: 1%;

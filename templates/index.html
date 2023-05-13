@@ -22,47 +22,47 @@
   </head>
   <body>
     <header>
-      <div class="selectionMenu">
-        <ul id="selectionMenuList">
-          <li class="selectionMenuListElement">
-            <img src="../images/Planet1.png" alt="Planet1" id="planetOne" />
-            <a href="#about" id="selectionMenuAboutRef">Обо мне</a>
+      <div class="selection-menu">
+        <ul id="selection-menu-list">
+          <li class="selection-menu-list-element">
+            <img src="../images/Planet1.png" alt="Planet1" id="planet-one" />
+            <a href="#about" id="selection-menu-about-ref">Обо мне</a>
           </li>
-          <li class="selectionMenuListElement">
-            <img src="../images/Planet2.png" alt="Planet2" id="planetTwo" />
-            <a href="#projects" id="selectionMenuProjectsRef">Проекты</a>
+          <li class="selection-menu-list-element">
+            <img src="../images/Planet2.png" alt="Planet2" id="planet-two" />
+            <a href="#projects" id="selection-menu-projects-ref">Проекты</a>
           </li>
-          <li class="selectionMenuListElement">
-            <img src="../images/Planet3.png" alt="Planet3" id="planetThree" />
-            <a href="#contacts" id="selectionMenuContactsRef">Контакты</a>
+          <li class="selection-menu-list-element">
+            <img src="../images/Planet3.png" alt="Planet3" id="planet-three" />
+            <a href="#contacts" id="selection-menu-contacts-ref">Контакты</a>
           </li>
         </ul>
       </div>
     </header>
 
     <div id="about">
-      <div class="aboutHeader">
-        <h1 class="aboutIntro">Привет! Меня зовут Дима, <br />и я Python Developer!</h1>
-        <img src="../images/about_avatar.jpg" alt="Avatar of Khorkov Dmitriy" class="aboutAvatar" />
+      <div class="about-header">
+        <h1 class="about-intro">Привет! Меня зовут Дима, <br />и я Python Developer!</h1>
+        <img src="../images/about_avatar.jpg" alt="Avatar of Khorkov Dmitriy" class="about-avatar" />
       </div>
-      <div class="aboutDescription">
+      <div class="about-description">
         <h1 id="characteristics">Developer</h1>
         <h1>Обо мне:</h1>
-        <h3 id="aboutInfoText"></h3>
+        <h3 id="about-info-text"></h3>
       </div>
-      <div class="aboutSkills">
+      <div class="about-skills">
         <h1>Что я умею:</h1>
-        <ul id="skillsList">
-          <li class="skillsListElement">Создавать телеграмм ботов</li>
-          <li class="skillsListElement">
+        <ul id="skills-list">
+          <li class="skills-list-element">Создавать телеграмм ботов</li>
+          <li class="skills-list-element">
             Создавать WEB-приложения на основе таких фреймворков как Django и FastApi + HTML, CSS, JavaScript
           </li>
-          <li class="skillsListElement">Создавать REST-api (предпочитаю тот же FastApi под капотом)</li>
-          <li class="skillsListElement">
+          <li class="skills-list-element">Создавать REST-api (предпочитаю тот же FastApi под капотом)</li>
+          <li class="skills-list-element">
             Работать SQL и NOSQL СУБД: PostgreSQL, MySQL, SQLite, MongoDB (предпочитаю через SQLAlchemy)
           </li>
-          <li class="skillsListElement">Изолировать систему через Docker</li>
-          <li class="skillsListElement">
+          <li class="skills-list-element">Изолировать систему через Docker</li>
+          <li class="skills-list-element">
             Работать с сокетами (строил консольную и UI игру по локальной сети на основе Socket и Tkinker библиотек)
           </li>
         </ul>
@@ -72,10 +72,12 @@
     <!-- <div class="divider"></div> -->
 
     <div id="projects">
-      <div class="projectsButtonsGroup">
-        <button class="projectsButton" id="telegramBot">PlantsCareBot</button>
-        <button class="projectsButton" id="djangoWebstore">NataliaToys</button>
-        <button class="projectsButton" id="FastApiTaskManager">TaskManager</button>
+      <div class="projects-buttons-group">
+        <ul id="project-buttons-list">
+          <li><button class="projects-button" id="telegram-bot">PlantsCareBot</button></li>
+          <li><button class="projects-button" id="django-webstore">NataliaToys</button></li>
+          <li><button class="projects-button" id="fast-api-task-manager">TaskManager</button></li>
+        </ul>
       </div>
       <div class="project"></div>
       <div class="project"></div>
@@ -83,23 +85,27 @@
       <div class="project"></div>
     </div>
 
-    <div id="contacts"></div>
+    <div id="contacts">
+      <div id="email">
+        <a href="mailto:alexqwerty35@yandex.ru">alexqwerty35@yandex.ru</a>
+      </div>
+    </div>
 
     <footer>
-      <div class="socialMedia">
-        <div id="socialMediaVk">
+      <div class="social-media">
+        <div id="social-media-vk">
           <a href="https://vk.com/alexqwerty35" target="_blank">
-            <img id="socialMediaVkLogo" src="../images/vk_logo.png" alt="vk.com" />
+            <img id="social-media-vk-logo" src="../images/vk_logo.png" alt="vk.com" />
           </a>
         </div>
-        <div id="socialMediaGitHub">
+        <div id="social-media-git-hub">
           <a href="https://github.com/DKhorkov" target="_blank">
-            <img id="socialMediaGitHubLogo" src="../images/github_logo.png" alt="github.com" />
+            <img id="social-media-git-hub-logo" src="../images/github_logo.png" alt="github.com" />
           </a>
         </div>
-        <div id="socialMediaTelegram">
+        <div id="social-media-telegram">
           <a href="https://t.me/D3M0S666" target="_blank">
-            <img id="socialMediaTelegramLogo" src="../images/telegram_logo.svg" alt="github.com" />
+            <img id="social-media-telegram-logo" src="../images/telegram_logo.svg" alt="github.com" />
           </a>
         </div>
       </div>

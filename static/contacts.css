@@ -5,3 +5,8 @@
   background-position: left;
   background-size: cover;
 }
+
+#email {
+  margin-left: -70%;
+  padding-top: 100px;
+}

@@ -1,59 +1,59 @@
-.socialMedia {
+.social-media {
   /* Делаем отцентровку логотипов соц.сетей */
   display: flex;
   justify-content: center;
 }
 
-#socialMediaVkLogo,
-#socialMediaGitHubLogo,
-#socialMediaTelegramLogo {
+#social-media-vk-logo,
+#social-media-git-hub-logo,
+#social-media-telegram-logo {
   background-color: white;
   margin-right: 20px;
   float: left;
   position: relative;
 }
 
-#socialMediaVkLogo {
+#social-media-vk-logo {
   height: 60px;
   width: 60px;
   margin-top: 13px;
 }
 
-#socialMediaVkLogo:hover {
+#social-media-vk-logo:hover {
   width: 70px;
   height: 70px;
   margin-top: 10px;
   margin-right: 10px; /* делаем, чтобы hover Вк не аффектило лого ГИТхаба (бывший margin - изменения height) */
 }
 
-#socialMediaGitHubLogo {
+#social-media-git-hub-logo {
   margin-top: 25px;
   height: 40px;
   width: 40px;
 }
 
-#socialMediaGitHubLogo:hover {
+#social-media-git-hub-logo:hover {
   width: 45px;
   height: 45px;
   margin-top: 20px;
   margin-right: 15px; /* По аналогии с ВК */
 }
 
-#socialMediaTelegramLogo {
+#social-media-telegram-logo {
   margin-top: 17px;
   height: 55px;
   width: 55px;
 }
 
-#socialMediaTelegramLogo:hover {
+#social-media-telegram-logo:hover {
   width: 65px;
   height: 65px;
   margin-top: 12px;
   margin-right: 10px; /* По аналогии с ВК */
 }
 
-#socialMediaVkLogo:hover,
+#social-media-vk-logo:hover,
 #socialMediaGitHubLogo:hover,
-#socialMediaTelegramLogo:hover {
+#social-media-telegram-logo:hover {
   background-color: blueviolet;
 }

@@ -27,7 +27,7 @@ export default class onStartUp {
   updateAboutInfoText() {
     let learningProgramming = (new Date() - this.#startProgramming) / this._years;
     let working = (new Date() - this.#startWorking) / this._years;
-    let tag = document.getElementById('aboutInfoText');
+    let tag = document.getElementById('about-info-text');
     tag.innerHTML = `Занимаюсь программированием  ${learningProgramming.toFixed(2)} года, из которых 
     ${working.toFixed(2)} года enterprise разработкой в GameDev. <br />Параллельно изучаю и применяю технологии
     в рамках своих pet-проектов :)`;
