@@ -1,4 +1,4 @@
-export default class onStartUp {
+export default class OnStartUp {
   #startProgramming;
   #startWorking;
   #characteristics;

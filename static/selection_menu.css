@@ -33,7 +33,7 @@
   color: #ffffff;
 }
 
-selectionMenuListElement:last-of-type {
+.selection-menu-list-element:last-of-type {
   padding-right: 0px;
 }
 

@@ -33,6 +33,7 @@
   color: blueviolet;
   border-color: blueviolet;
   animation: animate 6s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes animate {
@@ -42,4 +43,44 @@
   100% {
     background-position: 400%;
   }
+}
+
+#projects-main {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+
+  margin-top: 2.5%;
+  width: auto;
+  gap: 10%;
+}
+
+.project {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
+
+  background-color: white;
+  width: 80%;
+  height: 800px;
+}
+
+#telegram-bot-info {
+  margin-left: -80%;
+  /* margin-left: 10%; */
+}
+
+#telegram-bot-info,
+#fast-api-task-manager-info {
+  background-color: black;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 50px;
+  color: wheat;
 }
