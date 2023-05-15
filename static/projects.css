@@ -36,6 +36,11 @@
   cursor: pointer;
 }
 
+#telegram-bot-button {
+  background: black;
+  cursor: auto;
+}
+
 @keyframes animate {
   0% {
     background-position: 0%;
@@ -67,8 +72,8 @@
 }
 
 #telegram-bot-info {
-  margin-left: -80%;
-  /* margin-left: 10%; */
+  /* margin-left: -80%; */
+  margin-left: 10%;
 }
 
 #telegram-bot-info,
