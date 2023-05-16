@@ -36,7 +36,8 @@
   cursor: pointer;
 }
 
-#telegram-bot-button {
+/* для тех элементов, у которых сразу два эти класса */
+.projects-button.active {
   background: black;
   cursor: auto;
 }
@@ -61,10 +62,11 @@
 }
 
 .project {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-around;
+  align-items: center; */
   flex-shrink: 0;
+  /* gap: 30px; */
 
   background-color: white;
   width: 80%;
@@ -72,20 +74,41 @@
 }
 
 #telegram-bot-info {
-  /* margin-left: -80%; */
   margin-left: 10%;
 }
 
-#telegram-bot-info,
-#fast-api-task-manager-info {
-  background-color: black;
+.project_title {
+  width: 95%;
+  height: 10%;
+  /* border: 5px solid white; */
+  background-color: red;
+  margin: auto;
+  margin-top: 2%;
 }
 
-.test {
+.project_main_part {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 1%;
 
-  font-size: 50px;
-  color: wheat;
+  margin: auto;
+  margin-top: 1%;
+  width: 95%;
+  height: 80%;
+  /* border: 5px solid blue; */
+}
+
+.project_description {
+  width: 30%;
+  height: 100%;
+  /* border: 5px solid white; */
+  background-color: red;
+}
+
+.project_photoes {
+  width: 80%;
+  height: 100%;
+  /* border: 5px solid white; */
+  background-color: red;
 }
