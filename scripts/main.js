@@ -12,3 +12,4 @@ startup.viewCharacteristics();
 projects_switcher.changeProjectMonitor();
 
 photoes_switcher.changePhotoes();
+photoes_switcher.listenForPopups();
