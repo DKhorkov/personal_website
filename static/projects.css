@@ -182,18 +182,18 @@
 }
 
 .active_popup {
-  transition: box-shadow 0.5s linear 0.5s, top 1s ease-out, left 1s ease-out, transform 1s ease-out, width 1s ease-in,
-    height 1s ease-in;
+  transition: all 0.3s ease-in;
   box-shadow: 0 0 0 10px #fff;
   filter: drop-shadow(1px 2px 6px #000);
   pointer-events: none;
 }
 
-.show {
+.block_body {
+  /* Блокируем все возможные действия (скролл, переходы, курсор и.т.д) */
   pointer-events: none;
 }
 
-.close {
+.close_popup_button {
   position: relative;
   left: 100%;
   height: 20px;
@@ -208,10 +208,4 @@
   pointer-events: auto;
   cursor: pointer;
   transition: 1s linear;
-  opacity: 0;
-}
-
-.active_popup .close:hover {
-  transform: translate(0%, -100%) rotate(0.5turn);
-  transition: 1s ease;
 }

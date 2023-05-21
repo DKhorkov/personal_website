@@ -133,15 +133,15 @@ export default class photoesSwtitcher {
 
   listenForPopups() {
     this.#photoes_to_popup.forEach((photo) => {
-      photo.addEventListener('click', this.#createPopup.bind(this));
+      photo.addEventListener('click', this.#preconditionForCreatePopup.bind(this));
     });
   }
 
-  #createPopup(ev) {
+  #preconditionForCreatePopup(event) {
     let target_id;
     let photo_index;
 
-    switch (ev.target.parentNode.id) {
+    switch (event.target.parentNode.id) {
       case this.#target_ids[0]:
         target_id = this.#target_ids[0];
         photo_index = this.#tg_bot_current_index;
@@ -156,41 +156,69 @@ export default class photoesSwtitcher {
         break;
     }
 
-    const oGallery = document.querySelector('body');
-    let oTarget = ev.target;
-    let oBig = ev.target.appendChild(document.createElement('DIV'));
-    oBig.style.position = `absolute`;
-    oBig.style.top = `${oTarget.offsetTop}px`;
-    oBig.style.left = `${oTarget.offsetLeft}px`;
-    oBig.style.width = `${oTarget.offsetWidth}px`;
-    oBig.style.height = `${oTarget.offsetHeight}px`;
-    oBig.style.marginLeft = '-10.5%';
-    oBig.style.marginTop = '-2%';
+    this.#createPopup(event, target_id, photo_index);
+  }
 
-    let top = Number(oBig.style.top.replace('px', ''));
-    let left = Number(oBig.style.left.replace('px', ''));
-    window.scrollTo(top, left * 1.69);
+  #createPopup(event, target_id, photo_index) {
+    const body = document.querySelector('body'); // необходимо для дальнейшей блокировки и разблокировки при модальном окне
+    const standartPhoto = event.target;
+    let photoPopup = event.target.appendChild(document.createElement('div'));
+    const scaleCoefficient = 1.69; // Необходим для корректного скролла окна при появление модального окна
 
-    oBig.style.background = `center / 100% 100% no-repeat url('../images/${target_id}/${photo_index}.png')`;
-    oBig.insertAdjacentHTML('beforeend', '<div class="close">×</div>');
-    oBig.addEventListener('transitionend', function () {
-      this.querySelector('.close').style.opacity = 1;
-    });
-    oBig.addEventListener('click', function (ev) {
-      ev.stopPropagation();
-      this.addEventListener('transitionend', function () {
-        this.remove();
-      });
-      this.style.transition = `.5s ease-in`;
-      this.style.height = this.style.width = `0px`;
-      oGallery.classList.toggle('show', false);
-      window.onscroll = null;
-    });
-    oBig.classList.toggle('active_popup');
-    oBig.style.transform = `scale(2.1, 1.3)`;
-    oGallery.classList.toggle('show', true);
+    photoPopup = this.#addPopupStyles(photoPopup, standartPhoto, target_id, photo_index);
+    this.#scrollWindowToPopup(photoPopup, scaleCoefficient);
+    this.#activatePopupAndBlockBody(photoPopup, body);
+
+    photoPopup.insertAdjacentHTML('beforeend', '<div class="close_popup_button">X</div>');
+
+    // тут не нужно биндить, ибо работаем не с самим классом, а именно с объектом модального окна
+    photoPopup.addEventListener('click', this.#removePopupAndUnblockBody);
+  }
+
+  #addPopupStyles(photoPopup, standartPhoto, target_id, photo_index) {
+    const cssStyles = `
+      position: absolute;
+      top: ${standartPhoto.offsetTop}px;
+      left: ${standartPhoto.offsetLeft}px;
+      width: ${standartPhoto.offsetWidth}px;
+      height: ${standartPhoto.offsetHeight}px;
+      margin-left: -10.5%;
+      margin-top: -2%;
+      background: center / 100% 100% no-repeat url('../images/${target_id}/${photo_index}.png');
+    `;
+
+    photoPopup.style.cssText = cssStyles;
+    return photoPopup;
+  }
+
+  #scrollWindowToPopup(photoPopup, scaleCoefficient) {
+    const top = Number(photoPopup.style.top.replace('px', ''));
+    const left = Number(photoPopup.style.left.replace('px', ''));
+    window.scrollTo(top, left * scaleCoefficient);
     window.onscroll = function () {
-      window.scrollTo(top, left * 1.69);
+      window.scrollTo(top, left * scaleCoefficient);
     };
+  }
+
+  #removePopupAndUnblockBody(event) {
+    event.stopPropagation(); // Необходимо, чтобы после закрытия модального окна мы оставались на его месте
+    this.addEventListener('transitionend', () => this.remove()); // после transition удаляем попап
+    this.style.transition = `.5s ease-in`;
+    this.style.height = this.style.width = `0px`;
+
+    /*  classList.toggle работает как смесь remove и add для класса. Если класса нет - добавляет, если есть - убирает. Второй аргумент - форсирует */
+    const body = document.querySelector('body'); // необходимо для дальнейшей блокировки и разблокировки при модальном окне
+    body.classList.toggle('block_body', false);
+    body.style.overflow = 'auto';
+    window.onscroll = null;
+  }
+
+  #activatePopupAndBlockBody(photoPopup, body) {
+    photoPopup.classList.toggle('active_popup');
+    photoPopup.style.transform = `scale(2.1, 1.3)`;
+    body.classList.toggle('block_body', true);
+    setTimeout(() => {
+      body.style.overflow = 'hidden';
+    }, 1000);
   }
 }
