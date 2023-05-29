@@ -29,7 +29,7 @@ export default class OnStartUp {
     let working = (new Date() - this.#startWorking) / this._years;
     let tag = document.getElementById('about-info-text');
     tag.innerHTML = `Занимаюсь программированием  ${learningProgramming.toFixed(2)} года, из которых 
-    ${working.toFixed(2)} года enterprise разработкой в GameDev. <br />Параллельно изучаю и применяю технологии
+    ${working.toFixed(2)} года <br/> enterprise разработкой в GameDev. Параллельно изучаю и <br/> применяю технологии
     в рамках своих pet-проектов :)`;
   }
 
