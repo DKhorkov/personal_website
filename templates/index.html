@@ -190,16 +190,21 @@
           <span>Связаться по почте</span>
         </a>
       </div>
-      <div id="call-form">
-        <form>
-          <label for="name">Пожалуйста, укажите ваше имя:</label><br />
-          <input type="text" placeholder="Имя" id="name" required /><br />
-          <label for="name">Пожалуйста, укажите телефон для связи:</label><br />
-          <input type="tel" placeholder="Телефон" id="tel" required /><br />
-          <label for="date">Пожалуйста, выберите желаемую дату для звонка:</label><br />
-          <input type="datetime-local" placeholder="Время и дата" id="date" required /><br />
-          <button type="submit">Оставить заявку</button>
-        </form>
+      <div class="call-description">
+        <span>Оставить заявку для звонка:</span>
+      </div>
+      <div class="call-form-container">
+        <div id="call-form">
+          <form>
+            <label for="name">Ваше имя:</label><br />
+            <input type="text" placeholder="Даниил" id="name" required /><br />
+            <label for="name">Телефон для связи:</label><br />
+            <input type="tel" placeholder="79112004060" id="tel" required /><br />
+            <label for="date">Желаемая дата для звонка:</label><br />
+            <input type="datetime-local" placeholder="22.12.2023 15:50" id="date" required /><br />
+            <button type="submit" id="call-button">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
 

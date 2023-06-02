@@ -19,9 +19,9 @@
   display: flex;
   border: 5px solid wheat;
   margin-left: 7.5%;
-  margin-top: 100px;
+  margin-top: 5%;
   width: 30%;
-  height: 100px;
+  height: 80px;
   justify-content: space-evenly;
   align-items: center;
   background-color: white;
@@ -35,54 +35,93 @@
 }
 
 #email img {
-  width: 100px;
-  height: 100px;
-
-  margin-left: -30%;
+  width: 80px;
+  height: 80px;
+  margin-left: 10%;
 }
 
 #email a span {
   display: flex;
-  font-size: 40px;
-  font-style: italic;
+  font-size: 30px;
   font-weight: bold;
-  width: 180px;
+  width: 500px;
   height: 30px;
-  margin-top: -10%;
-  margin-left: -30%;
+  margin-top: -2%;
+  margin-left: 5%;
+}
+
+.call-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  margin-top: 3%;
+  margin-left: 7.5%;
+
+  font-family: 'Shentox Regular';
+  font-weight: bold;
+  color: white;
+  font-size: 40px;
+}
+
+.call-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 550px;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid wheat;
+  margin-left: 7.5%;
+  margin-top: 1.5%;
+}
+
+#call-form {
+  display: flex;
+  text-align: left;
+  font-family: 'Shentox Regular';
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 label {
   display: flex;
   justify-content: left;
-  margin-bottom: -3%;
+  margin-bottom: -6%;
+  margin-left: -10%;
 }
 
 input {
   display: flex;
   justify-content: left;
-  width: 100%;
-  height: 20%;
+  width: 120%;
+  height: 50px;
   text-align: left;
-}
+  margin-left: -10%;
 
-input::placeholder {
-  font-size: large;
-  font-style: italic;
+  font-size: 20px;
 }
 
 input[type='datetime-local']:hover {
   cursor: text;
 }
 
-#call-form {
-  display: flex;
-  margin-top: 5%;
-  text-align: left;
-  margin-left: 7.5%;
+#call-button {
+  width: 70%;
+  height: 50px;
+
   font-family: 'Shentox Regular';
-  color: white;
-  font-size: 24.5px;
-  font-weight: bold;
-  font-style: italic;
+  font-weight: bolder;
+  font-size: 30px;
+
+  background-color: #e27a76;
+  color: #030c51;
+  border-radius: 5px;
+  border: none;
+}
+
+#call-button:hover {
+  cursor: pointer;
+  opacity: 70%;
 }
