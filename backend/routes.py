@@ -3,6 +3,8 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, JSONResponse
 
 from backend.request_models import CallFormRequest
+from backend.response_models import CallFormResponse
+from call_application_bot import CallApplicationBot
 
 
 main_router = APIRouter()
@@ -20,7 +22,11 @@ async def create_call_application(request: CallFormRequest):
         name = request.name
         phone = request.phone
         call_date = request.call_date
-        return {'status': True, 'msg': 'Call was successfully processed and saved!'}
+
+        if CallApplicationBot(name=name, phone=phone, call_date=call_date).send_notification():
+            return CallFormResponse(call_status=True).get_template()
+        else:
+            raise Exception
     except Exception as e:
-        return {'status': False, 'msg': f'Error existed during processing call: {e}'}
+        return CallFormResponse(call_status=False, error=e).get_template()
 

@@ -25,7 +25,7 @@ export default class CallFormHandler {
   }
 
   #getInputValueByName(form, name) {
-    for (let index = 0; index <= form.elements.length; index++) {
+    for (let index = 0; index < form.elements.length; index++) {
       let element_name = form.elements[index].name;
       if (element_name == name) {
         return form.elements[index].value;
@@ -46,6 +46,11 @@ export default class CallFormHandler {
         call_date: date_for_call,
       }),
     }).then((response) => response.json());
-    console.log(response);
+
+    if ((response.validation_error == false) & (response.status == true)) {
+      alert('Заявка на звонок была успешно отправлена :)');
+    } else {
+      alert('Не удалось отправить заявку на звонок в связи с ошибкой сервера :(');
+    }
   }
 }
