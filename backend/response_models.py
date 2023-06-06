@@ -33,11 +33,13 @@ class CallFormResponse:
     def get_template(self) -> JSONResponse:
         if self.__call_status:
             msg = 'Call was successfully processed and saved!'
+            status_code = status.HTTP_200_OK
         else:
             msg = f'Error existed during processing call: {self.__error}'
+            status_code = status.HTTP_422_UNPROCESSABLE_ENTITY
 
         return JSONResponse(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=status_code,
             content={
                 'validation_error': not self.__call_status,
                 'status': self.__call_status,
