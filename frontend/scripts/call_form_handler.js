@@ -1,4 +1,4 @@
-export default class CallFormHandler {
+class CallFormHandler {
   #mainUrl;
   #callFormUrl;
   #callForm;
@@ -17,11 +17,17 @@ export default class CallFormHandler {
   }
 
   #processForm(form) {
+    let [person_name, phone_number, date_for_call] = this.#getFormData(form);
+
+    this.#sendDataToBackend(person_name, phone_number, date_for_call);
+  }
+
+  #getFormData(form) {
     let person_name = this.#getInputValueByName(form, 'person_name');
     let phone_number = this.#getInputValueByName(form, 'phone_number').replaceAll('-', '');
     let date_for_call = this.#getInputValueByName(form, 'date_for_call').replace('T', ' ');
 
-    this.#sendDataToBackend(person_name, phone_number, date_for_call);
+    return [person_name, phone_number, date_for_call];
   }
 
   #getInputValueByName(form, name) {
@@ -54,3 +60,9 @@ export default class CallFormHandler {
     }
   }
 }
+
+function personNameValidation(event) {
+  event.target.setCustomValidity('Пожалуйста, введите имя от 2 до 40 символов!');
+}
+
+export { CallFormHandler, personNameValidation };

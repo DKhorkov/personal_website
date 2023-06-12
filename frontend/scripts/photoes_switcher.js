@@ -163,9 +163,9 @@ export default class photoesSwtitcher {
     const body = document.querySelector('body'); // необходимо для дальнейшей блокировки и разблокировки при модальном окне
     const standartPhoto = event.target;
     let photoPopup = event.target.appendChild(document.createElement('div'));
-    const scaleCoefficient = 1.69; // Необходим для корректного скролла окна при появление модального окна
+    const scaleCoefficient = 1.3; // Необходим для корректного скролла окна при появление модального окна
 
-    photoPopup = this.#addPopupStyles(photoPopup, standartPhoto, target_id, photo_index);
+    photoPopup = this.#addPopupStyles(photoPopup, standartPhoto, target_id, photo_index, scaleCoefficient);
     this.#scrollWindowToPopup(photoPopup, scaleCoefficient);
     this.#activatePopupAndBlockBody(photoPopup, body);
 
@@ -175,15 +175,15 @@ export default class photoesSwtitcher {
     photoPopup.addEventListener('click', this.#removePopupAndUnblockBody);
   }
 
-  #addPopupStyles(photoPopup, standartPhoto, target_id, photo_index) {
+  #addPopupStyles(photoPopup, standartPhoto, target_id, photo_index, scaleCoefficient) {
     const cssStyles = `
       position: absolute;
       top: ${standartPhoto.offsetTop}px;
       left: ${standartPhoto.offsetLeft}px;
       width: ${standartPhoto.offsetWidth}px;
-      height: ${standartPhoto.offsetHeight}px;
-      margin-left: -10.5%;
-      margin-top: -2%;
+      height: ${standartPhoto.offsetHeight * scaleCoefficient}px;
+      margin-left: -11.3%;
+      margin-top: -9.3%;
       background: center / 100% 100% no-repeat url('../images/${target_id}/${photo_index}.png');
     `;
 
@@ -194,9 +194,9 @@ export default class photoesSwtitcher {
   #scrollWindowToPopup(photoPopup, scaleCoefficient) {
     const top = Number(photoPopup.style.top.replace('px', ''));
     const left = Number(photoPopup.style.left.replace('px', ''));
-    window.scrollTo(top, left * scaleCoefficient);
+    window.scrollTo(top, left * (scaleCoefficient / 1.225));
     window.onscroll = function () {
-      window.scrollTo(top, left * scaleCoefficient);
+      window.scrollTo(top, left * (scaleCoefficient / 1.225));
     };
   }
 

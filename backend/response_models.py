@@ -1,7 +1,6 @@
 from fastapi import status
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
-from fastapi.encoders import jsonable_encoder
 
 
 class ValidationErrorResponse:
