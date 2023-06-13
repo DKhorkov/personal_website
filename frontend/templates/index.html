@@ -215,7 +215,7 @@
               name="person_name"
               minlength="2"
               maxlength="40"
-              oninvalid="personNameValidation(this)"
+              data-validation="Пожалуйста, введите имя от 2 до 40 символов!"
               required
             /><br />
             <label for="name">Телефон для связи:</label><br />
@@ -224,12 +224,19 @@
               placeholder="8-9XX-XXX-XX-XX"
               name="phone_number"
               pattern="[7|8]-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              minlength="11"
+              minlength="15"
               maxlength="15"
+              data-validation="Пожалуйста, введите телефон для звонка в формате 8-9XX-XXX-XX-XX!"
               required
             /><br />
             <label for="date">Желаемая дата для звонка:</label><br />
-            <input type="datetime-local" placeholder="22.12.2023 15:50" name="date_for_call" required /><br />
+            <input
+              type="datetime-local"
+              placeholder="22.12.2023 15:50"
+              name="date_for_call"
+              data-validation="Пожалуйста, введите удобную дату и время для звонка!"
+              required
+            /><br />
             <button type="submit" id="call-button">Отправить</button>
           </form>
         </div>

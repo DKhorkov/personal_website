@@ -1,4 +1,4 @@
-class CallFormHandler {
+export default class CallFormHandler {
   #mainUrl;
   #callFormUrl;
   #callForm;
@@ -9,6 +9,24 @@ class CallFormHandler {
 
     this.#callForm = document.querySelector('#call-form');
     this.#callForm.addEventListener('submit', this.#handleSumbit.bind(this), false);
+
+    this.#handleInvalidInputs();
+  }
+
+  #handleInvalidInputs() {
+    const inputs_4_validation = document.querySelectorAll('input[data-validation]');
+    inputs_4_validation.forEach((input) => {
+      input.addEventListener('invalid', this.#onInputValidation);
+      input.addEventListener('input', this.#resetCustomValidity);
+    });
+  }
+
+  #onInputValidation(event) {
+    event.target.setCustomValidity(event.target.dataset.validation);
+  }
+
+  #resetCustomValidity(event) {
+    event.target.setCustomValidity('');
   }
 
   #handleSumbit(event) {
@@ -60,9 +78,3 @@ class CallFormHandler {
     }
   }
 }
-
-function personNameValidation(event) {
-  event.target.setCustomValidity('Пожалуйста, введите имя от 2 до 40 символов!');
-}
-
-export { CallFormHandler, personNameValidation };

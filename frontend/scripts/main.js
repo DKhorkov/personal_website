@@ -1,7 +1,7 @@
 import OnStartUp from './on_startup.js';
 import ProjectSwitvher from './projects_switcher.js';
 import photoesSwtitcher from './photoes_switcher.js';
-import { personNameValidation, CallFormHandler } from './call_form_handler.js';
+import CallFormHandler from './call_form_handler.js';
 
 let startup = new OnStartUp();
 let projects_switcher = new ProjectSwitvher();
