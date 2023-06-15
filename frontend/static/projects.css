@@ -119,11 +119,12 @@
   background-color: white;
   margin-top: 1%;
   margin-left: 2.5%;
+  font-size: 25px;
 }
 
 .project_stack {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: start;
   overflow: auto;
   width: 60%;
@@ -131,10 +132,39 @@
   background-color: white;
 }
 
+.project_stack ul {
+  list-style: none;
+  padding-left: 30%;
+}
+
+.project_stack ul li {
+  position: relative;
+  text-align: left;
+  font-size: 25px;
+  margin-left: 100px;
+}
+
+.project_stack li:before {
+  content: '✔';
+  margin-left: -50px;
+  color: green;
+}
+
 .project_description p,
 .project_stack p {
   text-align: justify;
   padding: 3% 5%;
+}
+
+.project_stack_intro {
+  width: 100%;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.project_stack_intro p {
+  text-align: center;
 }
 
 .project_photoes {
@@ -158,6 +188,16 @@
 }
 
 .project_photoes#fast-api-task-manager-photoes {
+  background-image: url('../images/telegram-bot-photoes/0.png');
+  background-size: 100% 100%;
+}
+
+.project_photoes#guess-the-number-photoes {
+  background-image: url('../images/telegram-bot-photoes/0.png');
+  background-size: 100% 100%;
+}
+
+.project_photoes#flappy-bird-photoes {
   background-image: url('../images/telegram-bot-photoes/0.png');
   background-size: 100% 100%;
 }

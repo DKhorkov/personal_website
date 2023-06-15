@@ -81,6 +81,8 @@
           <li><button class="projects-button active" type="button">PlantsCareBot</button></li>
           <li><button class="projects-button" type="button">NataliaToys</button></li>
           <li><button class="projects-button" type="button">TaskManager</button></li>
+          <li><button class="projects-button" type="button">GuessTheNumber</button></li>
+          <li><button class="projects-button" type="button">FlappyBird</button></li>
         </ul>
       </div>
 
@@ -92,20 +94,28 @@
 
           <div class="project_description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus iure veniam magni saepe velit fugit
-              aliquid necessitatibus earum blanditiis qui est dolore eveniet modi non sapiente reiciendis et, minus
-              pariatur vero ratione iusto? Architecto cupiditate facilis, obcaecati perspiciatis blanditiis itaque minus
-              qui quaerat laboriosam omnis voluptate porro praesentium error doloremque cumque perferendis aperiam
-              atque? Est dolorum ab nulla ipsum rem, voluptatum, dolores earum velit adipisci temporibus labore. Id iure
-              nobis quas quaerat, pariatur autem omnis impedit rerum dolorem quisquam modi delectus voluptate cumque
-              assumenda numquam neque reiciendis voluptas aliquid vel? Corporis nihil tenetur ut magni unde beatae eos
-              mollitia vitae?
+              Plants Care Telegram Bot - это телеграм бот, созданный для ухода и заботы о наших зеленых друзьях:
+              растениях :) На данный момент в боте реализована функция отслеживания полива, но в дальнейшем может быть
+              добавлены функция для мониторинга необзодимости удобрения или пересадки. Текущий тех позволяет создавать
+              сценарий полива, который объединяет растения по группе, давать описание этому сценарию, интервал полива,
+              указывать дату последнего полива. А уже далее можно добавить цветок в созданный ранее сценарий, указав
+              название растения, дополнительное описание, а также прикрепить фото. Как сценарии полива, так и данные о
+              самих растениях можно удалять и редактировать.
             </p>
           </div>
 
           <div class="project_main_part">
             <div class="project_stack">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div class="project_stack_intro">
+                <p>Технологии, использованные при создании проекта:</p>
+              </div>
+              <ul>
+                <li>pyTelegramBotAPI</li>
+                <li>SQLAlchemy</li>
+                <li>SQLite</li>
+                <li>telebot-calendar</li>
+                <li>requests</li>
+              </ul>
             </div>
 
             <div class="project_photoes" id="telegram-bot-photoes">
@@ -129,18 +139,29 @@
 
           <div class="project_description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi repudiandae vel quasi harum magni
-              laudantium quos dolor, molestiae quae ratione tempora quas! Quam facilis architecto consectetur rerum.
-              Eligendi ipsum nulla magni dolore itaque soluta ducimus porro quidem in voluptatibus, necessitatibus eos
-              possimus similique quae voluptate animi assumenda nostrum voluptates suscipit veniam numquam quia. Nihil,
-              doloribus. Non illo maiores voluptatem blanditiis ullam mollitia ducimus corrupti consequatur rem dolores.
-              Provident explicabo ab porro pariatur doloribus deleniti. Sequi distinctio at velit libero ratione?
+              Natalia Toys Webstore - это полноценный небольшой интернет магазин (backend часть) для продажи плюшевых
+              игрушек авторской ручной работы. Данный магазин написан на Django-framework, имеет каталог, корзину,
+              функцию оплаты (тестовой) через Яндекс-кассу, личный кабинет, историю заказов. Регистрация производится с
+              помощью emailи переходу по подтверждающей ссылке либо через соцсети: Вконтакте или Гугл. При оформлении
+              заказа он сохраняется в список заказов полььзователя, где также есть информация о том, олпачен заказ или
+              нет. После оплаты заказа пользователю отправляется чек, а владельцу (или потенциальному отправщику от его
+              имени) приходит на почту сообщение о том, что определенынй пользователь (с указанием адреса и контактов)
+              купил игрушку/игрушки в n-ном количестве и ждет их получения.
             </p>
           </div>
 
           <div class="project_main_part">
             <div class="project_stack">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div class="project_stack_intro">
+                <p>Технологии, использованные при создании проекта:</p>
+              </div>
+              <ul>
+                <li>Django</li>
+                <li>yookassa</li>
+                <li>SQLite</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
             </div>
 
             <div class="project_photoes" id="django-webstore-photoes">
@@ -176,10 +197,99 @@
 
           <div class="project_main_part">
             <div class="project_stack">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <div class="project_stack_intro">
+                <p>Технологии, использованные при создании проекта:</p>
+              </div>
+              <ul>
+                <li>some</li>
+                <li>some</li>
+                <li>some</li>
+              </ul>
             </div>
 
             <div class="project_photoes" id="fast-api-task-manager-photoes">
+              <div class="previous_photo" title="previous photo">
+                <img src="../images/previous_photo_image.png" class="previous_photo_img" />
+              </div>
+
+              <div class="project_photoes_container"></div>
+
+              <div class="next_photo" title="next photo">
+                <img src="../images/next_photo_image.png" class="next_photo_img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project" id="guess-the-number-info">
+          <div class="project_title">
+            <p>Guess The Number Game</p>
+          </div>
+
+          <div class="project_description">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dolore quo iure maxime rem sint ipsa
+              incidunt, officia fuga nostrum. Odio quo illo, dolore fuga at reiciendis iusto perspiciatis! Ratione rerum
+              rem laudantium sunt quisquam, autem dignissimos aperiam? Labore assumenda repudiandae voluptate aut
+              ratione quibusdam, repellat nemo. Harum consequuntur quidem odio nisi, suscipit vero maiores veritatis
+              iure mollitia in quos quisquam eaque? Accusamus eos molestiae quibusdam quisquam temporibus odio earum ad
+              error! Provident sit et odio nulla deserunt exercitationem commodi ut, aut temporibus sint voluptas
+              similique delectus laborum cumque laboriosam tempore repellat ipsam corrupti omnis esse eaque. Dicta,
+              officia voluptatibus!
+            </p>
+          </div>
+
+          <div class="project_main_part">
+            <div class="project_stack">
+              <div class="project_stack_intro">
+                <p>Технологии, использованные при создании проекта:</p>
+              </div>
+              <ul>
+                <li>some</li>
+                <li>some</li>
+              </ul>
+            </div>
+
+            <div class="project_photoes" id="guess-the-number-photoes">
+              <div class="previous_photo" title="previous photo">
+                <img src="../images/previous_photo_image.png" class="previous_photo_img" />
+              </div>
+
+              <div class="project_photoes_container"></div>
+
+              <div class="next_photo" title="next photo">
+                <img src="../images/next_photo_image.png" class="next_photo_img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project" id="flappy-bird-info">
+          <div class="project_title">
+            <p>Flappy Bird Game</p>
+          </div>
+
+          <div class="project_description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum error magnam minus! Molestiae fuga
+              eveniet, earum iusto corrupti consectetur praesentium, ipsum id enim sit ut cupiditate vitae eos
+              blanditiis. Eaque ab cumque sed asperiores est nemo. Dolore, explicabo ipsum ducimus sed cumque inventore
+              tenetur non rem delectus, incidunt sapiente adipisci.
+            </p>
+          </div>
+
+          <div class="project_main_part">
+            <div class="project_stack">
+              <div class="project_stack_intro">
+                <p>Технологии, использованные при создании проекта:</p>
+              </div>
+              <ul>
+                <li>some</li>
+                <li>some</li>
+              </ul>
+            </div>
+
+            <div class="project_photoes" id="flappy-bird-photoes">
               <div class="previous_photo" title="previous photo">
                 <img src="../images/previous_photo_image.png" class="previous_photo_img" />
               </div>

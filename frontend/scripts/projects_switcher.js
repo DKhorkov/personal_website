@@ -26,12 +26,22 @@ export default class ProjectSwitvher {
     this.#active_button = event.target;
 
     // Двигаем наши контейнеры с проектами
-    if (event.target.innerHTML == 'PlantsCareBot') {
-      this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: 10 }); // синтаксис kwargs
-    } else if (event.target.innerHTML == 'NataliaToys') {
-      this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: -80 });
-    } else {
-      this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: -170 });
+    switch (event.target.innerHTML) {
+      case 'PlantsCareBot':
+        this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: 10 }); // синтаксис kwargs
+        break;
+      case 'NataliaToys':
+        this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: -80 });
+        break;
+      case 'TaskManager':
+        this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: -170 });
+        break;
+      case 'GuessTheNumber':
+        this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: -260 });
+        break;
+      case 'FlappyBird':
+        this.#telegram_bot_info.style.cssText = this.#prepareCssText({ marginLeftInPercent: -350 });
+        break;
     }
   }
 
