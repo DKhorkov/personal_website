@@ -110,11 +110,12 @@
                 <p>Технологии, использованные при создании проекта:</p>
               </div>
               <ul>
-                <li>pyTelegramBotAPI</li>
+                <li>PyTelegramBotAPI</li>
                 <li>SQLAlchemy</li>
+                <li>Docker Compose</li>
                 <li>SQLite</li>
-                <li>telebot-calendar</li>
-                <li>requests</li>
+                <li>Telebot-Calendar</li>
+                <li>Requests</li>
               </ul>
             </div>
 
@@ -157,9 +158,10 @@
               </div>
               <ul>
                 <li>Django</li>
-                <li>yookassa</li>
+                <li>Yookassa</li>
                 <li>SQLite</li>
                 <li>HTML</li>
+                <li>Jinja2</li>
                 <li>CSS</li>
               </ul>
             </div>
@@ -185,13 +187,13 @@
 
           <div class="project_description">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, qui delectus? Ab amet, officia architecto
-              mollitia pariatur delectus aliquam. Veritatis ut dolore corrupti fugit, nemo accusamus. Possimus, ad
-              eligendi optio labore inventore quia dolore aperiam neque veritatis maiores iste provident tempore ipsum?
-              Similique possimus, sequi eveniet odit nulla facilis hic, repellendus aliquam cupiditate dolorum commodi
-              inventore? Odit, commodi eius? Deserunt harum nisi adipisci vero? Doloremque illo facere vitae harum rerum
-              impedit pariatur tempore officia! Sequi explicabo, perferendis rem recusandae veritatis fugiat assumenda
-              praesentium architecto soluta nobis labore beatae fugit nihil!
+              Task Manager - это веб-приложение для создания и отслеживания любых задач. Данное веб-приложение было
+              написано на современном асинхронном фреймворке FastApi. Задачи можно создавать, менять их статус
+              (открывать, закрывать, переоткрывать) и удалять. Регистрация производится по email и паролю: Если
+              пользователь зарегистрирован, идет проверка валидности введенного пароля (происходит хэширование пароля и
+              сравнение с хэшом в базе данных, созданным в момент регистрации). Если пароль валидный, то создается токен
+              для данного юзера, сохраняется в БД и добавляется в cookies ответа RedirectResponse, который
+              перенаправляет пользователя на страницу с его задачами. Срок жизни токена 2 недели.
             </p>
           </div>
 
@@ -201,9 +203,17 @@
                 <p>Технологии, использованные при создании проекта:</p>
               </div>
               <ul>
-                <li>some</li>
-                <li>some</li>
-                <li>some</li>
+                <li>FastApi</li>
+                <li>Cookies</li>
+                <li>Async SQLAlchemy</li>
+                <li>PyTest</li>
+                <li>SQLite</li>
+                <li>Hashlib</li>
+                <li>Logging</li>
+                <li>Pydantic</li>
+                <li>HTML</li>
+                <li>Jinja2</li>
+                <li>CSS</li>
               </ul>
             </div>
 
@@ -228,14 +238,14 @@
 
           <div class="project_description">
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dolore quo iure maxime rem sint ipsa
-              incidunt, officia fuga nostrum. Odio quo illo, dolore fuga at reiciendis iusto perspiciatis! Ratione rerum
-              rem laudantium sunt quisquam, autem dignissimos aperiam? Labore assumenda repudiandae voluptate aut
-              ratione quibusdam, repellat nemo. Harum consequuntur quidem odio nisi, suscipit vero maiores veritatis
-              iure mollitia in quos quisquam eaque? Accusamus eos molestiae quibusdam quisquam temporibus odio earum ad
-              error! Provident sit et odio nulla deserunt exercitationem commodi ut, aut temporibus sint voluptas
-              similique delectus laborum cumque laboriosam tempore repellat ipsam corrupti omnis esse eaque. Dicta,
-              officia voluptatibus!
+              Guess The Number Game - это игра для двоих по локальной сети, где первый игрок загадывает число в
+              определенном диапазоне, а второй пытается его отгадать в рамках заданного количества попыток. По окончании
+              раунда (когда закончились попытки или было угано число), происходит изменение счета, его вывод для игроков
+              и смена позиций (первый игрок становится вторым, а второй первым). Данная игра имеет как консольную
+              версию, так и версию с GUI. Во второй, которая является основной, на старте можно либо создать сервер (с
+              указанием адреса и порта для создания, а также с диапазоном числа и количеством попыток на то, чтобы его
+              угадать), либо подключиться к нему. При подключении создается игровое чат-окно, в котором юзеры и
+              взаимодействуют друг с другом.
             </p>
           </div>
 
@@ -245,8 +255,9 @@
                 <p>Технологии, использованные при создании проекта:</p>
               </div>
               <ul>
-                <li>some</li>
-                <li>some</li>
+                <li>Socket</li>
+                <li>Tkinker</li>
+                <li>Pickle</li>
               </ul>
             </div>
 
@@ -271,10 +282,12 @@
 
           <div class="project_description">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum error magnam minus! Molestiae fuga
-              eveniet, earum iusto corrupti consectetur praesentium, ipsum id enim sit ut cupiditate vitae eos
-              blanditiis. Eaque ab cumque sed asperiores est nemo. Dolore, explicabo ipsum ducimus sed cumque inventore
-              tenetur non rem delectus, incidunt sapiente adipisci.
+              Flappy Bird Game - это всем известная мобильная игра, переписанная на компьютер с помощью библиотеки
+              PyGame. Главной особенностью данного "ремейка" является предварительный графический интерфейс, в котором
+              можно установить количество жизней, цвета, уровень сложности, музыку, под котороую пользователь хочет
+              играть, а также размер непосредственного окна с игрой. Еще одной особенностью является персональный рекорд
+              и предыдущие конфигурации: пользователь всегда соревнуется с собой на том же уровне сложности и с тем же
+              количеством жизней.
             </p>
           </div>
 
@@ -284,8 +297,11 @@
                 <p>Технологии, использованные при создании проекта:</p>
               </div>
               <ul>
-                <li>some</li>
-                <li>some</li>
+                <li>PyGame</li>
+                <li>Pillow</li>
+                <li>Tkinker</li>
+                <li>SQLite</li>
+                <li>Pickle</li>
               </ul>
             </div>
 

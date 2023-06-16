@@ -13,10 +13,22 @@ export default class photoesSwtitcher {
   #fast_api_task_manager_photoes_list;
   #fast_api_task_manager_current_index;
 
+  #guess_the_number_photoes_list;
+  #guess_the_number_current_index;
+
+  #flappy_bird_photoes_list;
+  #flappy_bird_current_index;
+
   #photoes_to_popup;
 
   constructor() {
-    this.#target_ids = ['telegram-bot-photoes', 'django-webstore-photoes', 'fast-api-task-manager-photoes'];
+    this.#target_ids = [
+      'telegram-bot-photoes',
+      'django-webstore-photoes',
+      'fast-api-task-manager-photoes',
+      'guess-the-number-photoes',
+      'flappy-bird-photoes',
+    ];
 
     this.#next_buttons = document.querySelectorAll('.next_photo');
     this.#previous_buttons = document.querySelectorAll('.previous_photo');
@@ -25,11 +37,17 @@ export default class photoesSwtitcher {
     this.#tg_bot_photoes_list = [...Array(4).keys()];
     this.#tg_bot_current_index = 0;
 
-    this.#django_webstore_photoes_list = [...Array(4).keys()];
+    this.#django_webstore_photoes_list = [...Array(10).keys()];
     this.#django_webstore_current_index = 0;
 
-    this.#fast_api_task_manager_photoes_list = [...Array(4).keys()];
+    this.#fast_api_task_manager_photoes_list = [...Array(7).keys()];
     this.#fast_api_task_manager_current_index = 0;
+
+    this.#guess_the_number_photoes_list = [...Array(7).keys()];
+    this.#guess_the_number_current_index = 0;
+
+    this.#flappy_bird_photoes_list = [...Array(7).keys()];
+    this.#flappy_bird_current_index = 0;
 
     this.#photoes_to_popup = document.querySelectorAll('.project_photoes_container');
   }
@@ -65,6 +83,20 @@ export default class photoesSwtitcher {
           this.#fast_api_task_manager_photoes_list,
           this.#fast_api_task_manager_current_index,
           this.#target_ids[2]
+        );
+        break;
+      case this.#target_ids[3]:
+        this.#guess_the_number_current_index = this.#changePhoroToNextFromList(
+          this.#guess_the_number_photoes_list,
+          this.#guess_the_number_current_index,
+          this.#target_ids[3]
+        );
+        break;
+      case this.#target_ids[4]:
+        this.#flappy_bird_current_index = this.#changePhoroToNextFromList(
+          this.#flappy_bird_photoes_list,
+          this.#flappy_bird_current_index,
+          this.#target_ids[4]
         );
         break;
     }
@@ -109,6 +141,20 @@ export default class photoesSwtitcher {
           this.#target_ids[2]
         );
         break;
+      case this.#target_ids[3]:
+        this.#guess_the_number_current_index = this.#changePhoroToPreviousFromList(
+          this.#guess_the_number_photoes_list,
+          this.#guess_the_number_current_index,
+          this.#target_ids[3]
+        );
+        break;
+      case this.#target_ids[4]:
+        this.#flappy_bird_current_index = this.#changePhoroToPreviousFromList(
+          this.#flappy_bird_photoes_list,
+          this.#flappy_bird_current_index,
+          this.#target_ids[4]
+        );
+        break;
     }
   }
 
@@ -148,11 +194,19 @@ export default class photoesSwtitcher {
         break;
       case this.#target_ids[1]:
         target_id = this.#target_ids[1];
-        photo_index = this.#tg_bot_current_index;
+        photo_index = this.#django_webstore_current_index;
         break;
       case this.#target_ids[2]:
         target_id = this.#target_ids[2];
-        photo_index = this.#tg_bot_current_index;
+        photo_index = this.#fast_api_task_manager_current_index;
+        break;
+      case this.#target_ids[3]:
+        target_id = this.#target_ids[3];
+        photo_index = this.#guess_the_number_current_index;
+        break;
+      case this.#target_ids[4]:
+        target_id = this.#target_ids[4];
+        photo_index = this.#flappy_bird_current_index;
         break;
     }
 

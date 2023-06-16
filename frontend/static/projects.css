@@ -133,15 +133,19 @@
 }
 
 .project_stack ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
-  padding-left: 30%;
+  padding-left: 14.5%;
 }
 
 .project_stack ul li {
-  position: relative;
+  display: flex;
+  justify-content: left;
   text-align: left;
   font-size: 25px;
-  margin-left: 100px;
 }
 
 .project_stack li:before {
@@ -183,22 +187,22 @@
 }
 
 .project_photoes#django-webstore-photoes {
-  background-image: url('../images/telegram-bot-photoes/0.png');
+  background-image: url('../images/django-webstore-photoes/0.png');
   background-size: 100% 100%;
 }
 
 .project_photoes#fast-api-task-manager-photoes {
-  background-image: url('../images/telegram-bot-photoes/0.png');
+  background-image: url('../images/fast-api-task-manager-photoes/0.png');
   background-size: 100% 100%;
 }
 
 .project_photoes#guess-the-number-photoes {
-  background-image: url('../images/telegram-bot-photoes/0.png');
+  background-image: url('../images/guess-the-number-photoes/0.png');
   background-size: 100% 100%;
 }
 
 .project_photoes#flappy-bird-photoes {
-  background-image: url('../images/telegram-bot-photoes/0.png');
+  background-image: url('../images/flappy-bird-photoes/0.png');
   background-size: 100% 100%;
 }
 
