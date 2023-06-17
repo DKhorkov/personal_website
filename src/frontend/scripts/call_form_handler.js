@@ -1,12 +1,7 @@
 export default class CallFormHandler {
-  #mainUrl;
-  #callFormUrl;
   #callForm;
 
   constructor() {
-    this.#mainUrl = 'http://D3M0S-World:8090/';
-    this.#callFormUrl = this.#mainUrl + 'create_call_application';
-
     this.#callForm = document.querySelector('#call-form');
     this.#callForm.addEventListener('submit', this.#handleSumbit.bind(this), false);
 
@@ -58,7 +53,7 @@ export default class CallFormHandler {
   }
 
   async #sendDataToBackend(person_name, phone_number, date_for_call) {
-    const response = await fetch(this.#callFormUrl, {
+    const response = await fetch(`create_call_application`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -73,6 +68,7 @@ export default class CallFormHandler {
 
     if ((response.validation_error == false) & (response.status == true)) {
       alert('Заявка на звонок была успешно отправлена :)');
+      document.forms[0].reset();
     } else {
       alert('Не удалось отправить заявку на звонок в связи с ошибкой сервера :(');
     }

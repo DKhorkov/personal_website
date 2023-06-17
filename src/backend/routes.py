@@ -1,19 +1,26 @@
 from fastapi import APIRouter, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, JSONResponse
+from socket import gethostbyname, gethostname
 
-from backend.request_models import CallFormRequest
-from backend.response_models import CallFormResponse
+from request_models import CallFormRequest
+from response_models import CallFormResponse
 from call_application_bot import CallApplicationBot
 
 
 main_router = APIRouter()
-templates = Jinja2Templates(directory="frontend/templates")
+templates = Jinja2Templates(directory="src/frontend/templates")
 
 
 @main_router.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
-    return templates.TemplateResponse(name="index.html", context={"request": request})
+    return templates.TemplateResponse(
+        name="index.html",
+        context={
+            "request": request,
+            "main_url": f"{gethostbyname(gethostname())}:8090/"
+        }
+    )
 
 
 @main_router.post("/create_call_application", response_class=JSONResponse)

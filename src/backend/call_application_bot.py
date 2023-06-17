@@ -2,7 +2,7 @@ from telebot import TeleBot
 from logging import getLogger
 from datetime import datetime
 
-from backend.call_application_bot_configs import TOKEN, CHAT_ID
+from call_application_bot_configs import TOKEN, CHAT_ID
 
 
 class CallApplicationBot:
